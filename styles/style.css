@@ -1,0 +1,238 @@
+#content {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 150px repeat(4,1fr);
+    grid-template-rows: auto;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+a {
+    padding-left: 10px;
+}
+
+header {
+    display: flex;
+    background-color: rgb(240, 140, 0);
+    grid-column: 1/6;
+    border: black 2px solid;
+    
+}
+
+header img {
+    float: left;
+    height: 80px;
+    margin: 10px;
+}
+
+nav h4{
+    margin-top: 18px;
+    padding-left: 5px;
+    line-height: 0;
+}
+
+nav {
+    background-color: rgb(240, 140, 0);
+    font-size: 1.2em;
+    min-height: 150px;
+    width: 150px;
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav > a:hover {
+    background-color: rgb(235, 210, 120);
+    border: 2px solid rgb(185, 75, 10);
+    border-radius: 5px;
+}
+
+.brave {
+    background-image: url(../images/cat.jpg);
+    background-size: cover;
+    grid-column: 2/3;
+    border: 10px solid rgb(240, 140, 0)
+}
+
+.brave:hover {
+    border-color: rgb(240, 140, 0);
+}
+
+.intelligent {
+    background-image: url(../images/light.jpg);
+    background-size: cover;
+    grid-column: 3/4;
+    border: 10px solid rgb(240, 140, 0)
+}
+
+.intelligent:hover {
+    border-color: rgb(225, 0, 105);
+}
+
+.fair {
+    background-image: url(../images/judge.jpg);
+    background-size: cover;
+    grid-column: 4/5;
+    border: 10px solid rgb(240, 140, 0);
+}
+
+.fair:hover {
+    border-color: rgb(0, 175, 215);
+}
+
+.responsible {
+    background-image: url(../images/eco.jpg);
+    background-size: cover;
+    grid-column: 5/6;
+    border: 10px solid rgb(240, 140, 0);
+}
+
+.responsible:hover {
+    border-color: rgb(45, 170, 55);
+}
+
+.brave, .intelligent, .responsible, .fair {
+    color: rgb(255, 255, 255);
+    height: 200px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.4em;
+    text-decoration: none;
+    text-align: right;
+    padding-right: 20px;
+}
+
+article {
+    grid-column: 2/6;
+    padding-bottom: 15px;
+}
+
+article p {
+    text-align: justify;
+    padding: 0px 15px 0px 15px;
+}
+
+article a {
+    text-align: justify;
+    padding: 0px 15px 0px 15px;
+}
+
+footer {
+    display: flex;
+    background-color: rgb(240, 140, 0);
+    grid-column: 1 / 6;
+    grid-row: 4 / 5;
+    padding: 5px;
+    align-items: center;
+    
+}
+
+footer div {
+    flex-grow: 5;
+    text-align: right;
+}
+
+footer img {
+    height: 80px;
+    margin: 10px;
+}
+
+header, nav, article, footer {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+table th, td {
+    text-align: left;
+    padding-right: 25px;
+}
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        grid-row: 2/7;
+    }
+
+    .brave, .intelligent, .fair, .responsible {
+        background-image: none;
+        background-color: rgb(235, 210, 120);
+        border: 2px solid black;
+        color: black;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+        grid-column: 2/6;
+        height: fit-content;
+    }
+
+    .brave {
+        grid-row: 2/2;
+    }
+
+    .brave:hover {
+        background-color: rgb(240, 140, 0);
+        border-color: rgb(240, 140, 0);
+    }
+
+    .intelligent {
+        grid-row: 3/3;
+    }
+
+    .intelligent:hover {
+        background-color: rgb(240, 140, 0);
+        border-color: rgb(225, 0, 105);
+    }
+
+    .fair {
+        grid-row: 4/4;
+    }
+
+    .fair:hover {
+        background-color: rgb(240, 140, 0);
+        border-color: rgb(0, 175, 215);
+    }
+
+    .responsible {
+        grid-row: 5/5;
+    }
+
+    .responsible:hover {
+        background-color: rgb(240, 140, 0);
+        border-color: rgb(45, 170, 55);
+    }
+
+    footer {
+        grid-row: 7/7;
+    }
+
+    footer img {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+
+    nav {
+        width: 20px;
+        position: absolute;
+        display: block;
+        font-size: 0;
+        top: 110px;
+        padding-bottom: 9px;
+    }
+    
+    .brave, .intelligent, .fair, .responsible, .article {
+        grid-column: 1/6;
+    }
+
+    nav:hover {
+        padding-bottom: 8px;
+        width: 150px;
+        font-size: 20px;
+    }
+}
